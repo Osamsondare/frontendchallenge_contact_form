@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samwise Contact Form</title>
+    <link rel="stylesheet" href="/solution/style.css">
+    <link rel="shortcut icon" href="/solution/favicon-32x32.png" type="image/x-icon">
+</head>
+<body>
+   
+    <script src="/solution/info.js"></script>
+       
+        <form id="contact-form">
+            <h1>Contact Us</h1>
+            <div class="each-form">
+                <div class="f-lName"> 
+                    <div class="f-name">
+                            <label for="first">FIrst Name <span>*</span></label>
+                            <input type="text" name="firt-name" id="first-name" editable>
+                            <p class="error-message">This field is required</p>
+                    </div>
+                    <div class="l-name">
+                        <label for="last-name">Last Name <span>*</span></label>
+                        <input type="text" name="last-name" id="last-name" editable>
+                        <p class="error-message">This field is required</p>
+                    </div>
+                </div>
+            </div>
+            <div class="each-form">
+                <label for="e-mail">Email Address <span>*</span></label><br>
+                <input type="email" name="e-mail" id="e-mail">
+                <p class="error-message">Please enter a valid email address</p>
+            </div>
+            <div class="each-form">
+                <label for="query-type">Query Type <span>*</span></label>
+                    <div class="radio-input">
+                            <div class="radio-option" id="radio-option">
+                                <input type="radio" name="query-type" id="general-enquiry" value="query-type">
+                                <label for="general-enquiry">General Enquiry</label>
+                            </div>
+                            <div class="radio-option" id="radio-option">
+                                <input type="radio" name="query-type" id="support-request" value="query-type">
+                                <label for="support-request" id="second-label">Support Request</label>
+                            </div>
+                    </div>
+                <div class="error-message">Please select a query type</div>
+            </div>
+            <div class="each-form" id="mesages">
+                <label for="message" >Message <span>*</span></label><br>
+                <textarea name="message" id="message" rows="4"></textarea>
+                <p class="error-message">This field is required</p>
+            </div>
+            <div class="each-form" id="cosentqq">
+                <input type="checkbox" name="consent" id="consent">
+                <label for="checkbox" class="label-checkbox">I consent to being contacted by the team <span>*</span></label>
+                <p class="error-message">To submit this form, please consent to being contacted</p>
+            </div>
+            <button class="submit" type="submit" >Submit</button>
+
+
+        </form>
+
+    
+
+<div id="success-message" class="success-message">
+    <div class="message-head">
+        <img src="/solution/icon-success-check.svg" alt="">
+        <p>Message Sent!</p>
+    </div>
+    <p>Thanks for completing this form. We'll be in touch</p>
+</div>
+
+<script src="/solution/info.js"></script>
+
+</body>
+</html>

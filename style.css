@@ -1,0 +1,200 @@
+@font-face {
+    font-family: karla1 ;
+    src: url(/solution/Karla-Bold.ttf);
+}
+@font-face {
+    font-family: karla ;
+    src: url(/solution/Karla-Regular.ttf);
+}
+@font-face {
+    font-family:karla22 ;
+    src: url(/solution/Karla-Italic-VariableFont_wght.ttf);
+}
+:root{
+    --Green-light: hsl(148, 38%, 91%);
+    --Green-medium: hsl(169, 82%, 27%);
+    --Red-medium: hsl(0, 66%, 54%);
+    --White: hsl(0, 0%, 100%);
+    --Grey-medium: hsl(186, 15%, 59%);
+    --Grey-dark: hsl(187, 24%, 22%);
+}
+body{
+    background-color: var(--Green-light);
+    height: 100vh;
+    font-family: 'karla', 'karla1', 'karla22', sans-serif;
+    display: grid;
+    place-content: center;
+}
+label{
+    color: var(--Grey-dark);
+    
+} 
+/* .each-form>.f-lName>.f-name > label{
+    margin-bottom: 3em;
+} */
+input,
+textarea{
+    /* width: 100%; */
+    color: var(--Grey-medium);
+    padding: .5rem;
+    margin-top: 1rem;
+    margin-bottom: 1em;
+    font-family: inherit;
+    border: 1px solid var(--Green-medium);
+    border-radius: .35rem;
+    
+}
+.error-message{
+    color: var(--Red-medium);
+    display: none;
+}
+.f-lName{
+    display: flex;
+    
+}
+.each-form{
+    width: 100%;
+}
+
+input[type='text'], 
+input[type='email'],
+textarea{
+    width: 100%;
+    cursor: pointer;
+}
+.each-form >.f-lName >.f-name > #first-name{
+    cursor: pointer;
+}
+.l-name{
+    margin-left: 2rem;
+}
+input:focus,
+textarea:focus{
+    outline: 1px solid var(--Grey-dark);
+    border: 1px solid var(--Grey-dark);
+    
+}
+
+form{
+    background-color: var(--White);
+    margin: 1rem;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+.radio-input{
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+     
+} 
+.radio-option{
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    outline: 2px solid var(--Grey-medium); 
+    border-radius: 0.35rem;
+    width: 100%;
+}
+.radio-option > label{
+    margin-top: .8rem;
+}
+#second-label{
+   
+}
+
+.radio-input{
+    color: var(--Green-medium);
+}
+#mesages{
+    padding-top: 1em;
+}
+#cosentqq{
+    margin-top: .5rem;
+}
+.submit{
+    width: 100%;
+    height: 3rem;
+    color: var(--White);
+    background-color: var(--Green-medium);
+    cursor: pointer;
+    border-radius: 0.5rem;
+    border: 1px solid var(--Green-medium);
+    margin-top: 1em;
+}
+.submit:hover{
+    background-color: var(--Grey-dark);
+}
+.success-message{
+    opacity: 0;
+    background-color: var(--Grey-dark);
+    color: var(--Grey-medium);
+    padding: 20px;
+    border-radius: 0.5rem;
+    width: max-content;
+    height: max-content;
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.success-message.active{
+    display: block;
+    pointer-events: all;
+    animation-name: fadeout;
+}
+@keyframes fadeout{
+    0%, 25%, 75%{opacity: 1;
+   }
+   100%{
+    opacity: 1;
+}
+}
+
+.success-message .message-head{
+
+    color: var(--White);
+    font-weight: bold;
+}
+.message-head{
+    display: flex;
+    gap: 1rem;
+}
+.radio-option input[type='radio'] {
+    appearance: none;
+    width: .5rem;
+    height: .5rem;
+    margin-left: .8rem;
+    outline: 2px solid var(--Green-medium);
+    outline-offset: 2px;
+    border-radius: 50%;
+}
+.radio-option input[type='radio']:checked{
+    background-color: var(--Green-medium);
+}
+input[type='checkbox']{
+    cursor: pointer;
+    accent-color: var(--Green-medium);
+}
+/* .label-checkbox{
+    cursor: pointer;
+}  */
+@media only screen and (max-width: 768px){
+    .f-lName{
+        display: flex;
+        flex-direction: column;
+    }
+    .l-name{
+        margin-left: 0rem;
+    }
+    .radio-input{
+        display: flex;
+          flex-direction: column;
+        
+        width: 100%; 
+    }
+    body{
+        background-color: var(--Green-light);
+        height: max-content;
+    }
+     
+}
